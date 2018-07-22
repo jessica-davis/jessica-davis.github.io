@@ -22,32 +22,31 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     width: 100%;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color:grey;
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    background-color: #333;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: grey;
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: teal;
-    color: white ;
-}
+ul.topnav li a:hover:not(.active) {background-color: #111;}
 
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
 }
 
 </style>
