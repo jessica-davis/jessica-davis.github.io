@@ -67,6 +67,21 @@ ul.topnav li a:hover:not(.active) {background-color: grey;color:black}
   padding-top: 60px;
 
 </style>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
 <!-- Navigation Bar -->
 <ul class="topnav">
   <li><a class="active">Home</a></li>
