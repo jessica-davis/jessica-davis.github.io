@@ -55,6 +55,17 @@ ul.topnav li a:hover:not(.active) {background-color: grey;color:black}
     ul.topnav li {float: none;}
 }
 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+
 </style>
 <!-- Navigation Bar -->
 <ul class="topnav">
@@ -103,7 +114,7 @@ ul.topnav li a:hover:not(.active) {background-color: grey;color:black}
         <div class="w3-display-container">
           <img src="main.jpg" style="width:100%" alt="me">
 
-          <div class="w3-display-bottomleft w3-container w3-text-white">
+          <div class="w3-display-bottomleft w3-container w3-text-grey">
             <h2>About <b>Me </b></h2>
           </div>
         </div>
