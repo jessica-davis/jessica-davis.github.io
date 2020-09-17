@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<title>Jessica Davis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+.banner-img {
+    width: 100%;
+}
+
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+</style>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<!-- Navigation Bar -->
+<!--<ul class="topnav">
+  <li><a class="active">Home</a></li>
+    <li class="right"><a href="#about">About</a></li>
+  <li><a href="#news">Research Interests</a></li>
+  <li><a href="#contact">CV</a></li>
+  <li class="right"><a href="#about">Other</a></li>
+</ul>-->
+<div id="navbar">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">News</a>
+  <a href="javascript:void(0)">Contact</a>
+</div>
+
+
+
+
+<!-- Banner Picture -->
+<div id="banner">
+  <center>
+    <div id="wrapper">
+        <div id="container">
+                <img class="banner-img" src="Untitled_copy.png">
+              
+        </div>
+    </div>
+  </center>
+</div>
+
+
+
+<!-- Header -->
+<!--<header class="w3-container w3-center w3-padding-32">
+  <h1>Jessica <b>Davis</b></h1>
+   <p>Graduate Student in Network Science at Northeastern University</p>
+</header>-->
+
+
+
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1300px;">
+<!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+      
+      <div class="w3-white w3-text-grey w3-card-4">
+        <h2> Jessica Davis </h2>
+        <div class="w3-display-container">
+          <img src="main.jpg" style="width:100%" alt="me">
+        </div>
+        <div class="w3-container">
+          <p>Network Scientist in training</p>
+          
+          <p><a href = "https://www.google.com/maps/place/Network+Science+Institute+at+Northeastern+University/@42.3449499,-71.0849884,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37a1053f97b93:0x39c8950c453fb986!8m2!3d42.3449499!4d-71.0827997" title= "Network Science Institute" ><i class="fa fa-map-marker fa-fw w3-margin-right w3-large w3-text-grey"></i></a>Boston, MA</p>
+
+          <p><a href="mailto:davis.jes@husky.neu.edu"><i class="fa fa-fw fa-envelope-square fa-fw w3-margin-right" ></i></a> Email</p>
+
+          <p><a href="https://twitter.com/jessicatdavis16"> <i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> @jessicatdavis16    </a></p>
+
+          <p><a href="https://www.linkedin.com/in/jessica-davis-9b9492112/"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i></a> LinkedIn</p>
+
+
+        </div>
+      </div><br>
+    </div>
+      <div class="w3-twothird">
+        <h2> </h2>
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2> Hello! </h2>
+          <p> I am a graduate student at the Network Science Institute at Northeastern University </p>
+        <div class="w3-container">
+        </div>
+        </div>
+</div>
+
+</body>
+</html>
+
+
+    <!-- End Left Column -->
