@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Weekly Incidence of Influenza Hospital Admissions</title>
+  </head>
+  <body>
+    <h1>Weekly Incidence of Influenza Hospital Admissions</h1>
+    <div id="plotly_chart"></div>
+    <script>
+      var end_date = [
+        "2022-08-06",
+        "2022-08-13",
+        "2022-08-20",
+        "2022-08-27",
+        "2022-09-03",
+        "2022-09-10",
+        "2022-09-17",
+        "2022-09-24",
+        "2022-10-01",
+        "2022-10-08",
+        "2022-10-15",
+        "2022-10-22",
+        "2022-10-29",
+        "2022-11-05",
+        "2022-11-12",
+        "2022-11-19",
+        "2022-11-26",
+        "2022-12-03",
+        "2022-12-10",
+        "2022-12-17",
+        "2022-12-24",
+        "2022-12-31",
+        "2023-01-07",
+        "2023-01-14",
+        "2023-01-21",
+        "2023-01-28",
+        "2023-02-04"
+      ];
+      var hosp_inc = [
+        560.0,
+        505.0,
+        528.0,
+        528.0,
+        525.0,
+        535.0,
+        546.0,
+        633.0,
+        799.0,
+        1211.0,
+        1540.0,
+        2190.0,
+        4086.0,
+        6160.0,
+        8405.0,
+        10590.0,
+        17946.0,
+        23270.0,
+        20367.0,
+        17981.0,
+        16041.0,
+        16299.0,
+        10995.0,
+        5673.0,
+        3602.0,
+        2329.0,
+        2144.0
+      ];
+      var data = [
+        {
+          x: end_date,
+          y: hosp_inc,
+          type: "line",
+          mode: "lines+markers",
+          marker: { color: "red" }
+        }
+      ];
+      Plotly.newPlot("plotly_chart", data);
+    </script>
+    <h2>Data Source</h2>
+    <p>
+      The data used in this chart was generated through weekly hospital admission reports and reflects the number of hospital admissions due to influenza.
+    </p>
+  </body>
+</html>

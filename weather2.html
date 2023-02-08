@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <style>
+      .chart-container {
+        width: 80%;
+        height: 500px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+      const data = [
+        { end_date: "2022-08-06", hosp_inc: 560.0, temperature: 20 },
+        { end_date: "2022-08-13", hosp_inc: 505.0, temperature: 18 },
+        { end_date: "2022-08-20", hosp_inc: 528.0, temperature: 21 },
+        { end_date: "2022-08-27", hosp_inc: 528.0, temperature: 22 },
+        { end_date: "2022-09-03", hosp_inc: 525.0, temperature: 20 },
+        { end_date: "2022-09-10", hosp_inc: 535.0, temperature: 19 },
+        { end_date: "2022-09-17", hosp_inc: 546.0, temperature: 22 },
+        { end_date: "2022-09-24", hosp_inc: 633.0, temperature: 25 },
+        { end_date: "2022-10-01", hosp_inc: 799.0, temperature: 27 },
+        { end_date: "2022-10-08", hosp_inc: 1211.0, temperature: 30 },
+        { end_date: "2022-10-15", hosp_inc: 1540.0, temperature: 29 },
+        { end_date: "2022-10-22", hosp_inc: 2190.0, temperature: 28 },
+        { end_date: "2022-10-29", hosp_inc: 4086.0, temperature: 26 },
+        { end_date: "2022-11-05", hosp_inc: 6160.0, temperature: 24 },
+        { end_date: "2022-11-12", hosp_inc: 8405.0, temperature: 21 },
+        { end_date: "2022-11-19", hosp_inc: 10590.0, temperature: 20 },
+        { end_date: "2022-11-26", hosp_inc: 17946.0, temperature: 18 },
+        { end_date: "2022-12-03", hosp_inc: 23270.0, temperature: 17 },
+        { end_date: "2022-12-10", hosp_inc: 20367.0, temperature: 19 },
+        { end_date: "2022-12-17", hosp_inc: 17981.0, temperature: 21 },
+        { end_date: "2022-12-24", hosp_inc: 16041.0, temperature: 20 },
+        { end_date: "2022-12-31", hosp_inc: 16299.0, temperature: 23 },
+      { end_date: "2023-01-07", hosp_inc: 10995.0, temperature: 25 },
+      { end_date: "2023-01-14", hosp_inc: 5673.0, temperature: 26 },
+      { end_date: "2023-01-21", hosp_inc: 3602.0, temperature: 25 },
+      { end_date: "2023-01-28", hosp_inc: 2329.0, temperature: 24 },
+      { end_date: "2023-02-04", hosp_inc: 2144.0, temperature: 22 }
+    ];
+    const endDates = data.map(d => d.end_date);
+    const hospInc = data.map(d => d.hosp_inc);
+    const temperatures = data.map(d => d.temperature);
+
+    const ctx = document.getElementById("myChart").getContext("2d");
+    const myChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: endDates,
+        datasets: [
+          {
+            label: "Hospital Admissions",
+            data: hospInc,
+            borderColor: "#3e95cd",
+            fill: false
+          },
+          {
+            label: "Temperature",
+            data: temperatures,
+            borderColor: "#8e5ea2",
+            fill: false
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Weekly Incidence of Influenza Hospital Admissions and Temperature"
+        }
+      }
+    });
+  </script>
+</body>
+</html>
