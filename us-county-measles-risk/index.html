@@ -27,36 +27,37 @@
 <body>
 
 <div id="sidebar">
-    <h2>County Risk Viewer</h2>
-    <p>Select a tab to view different types of risk estimates for U.S. counties. Each map is interactive.</p>
+    <h2>Risk Estimates for Measles Outbreaks</h2>
+    <p>Select a tab to view different types of risk estimates for measles for U.S. counties. Each map is interactive and shows county-level data with hover details.</p>
     <ul>
-        <li><strong>County Risk:</strong> continuous risk score</li>
-        <li><strong>Imported:</strong> presence of imported risk</li>
-        <li><strong>Local:</strong> local transmission detected</li>
-        <li><strong>No Risk:</strong> no risk observed</li>
+        <li><strong>Importation Risk:</strong> measures the likelihood of disease cases being introduced from external sources such as travel or trade</li>
+        <li><strong>Recent Vaccination Coverage:</strong> MMR coverage in children (specific definitions varies by state) taken from "Trends in County-Level MMR Vaccination Coverage in Children in the United States" by Dong et al. </li>
+        <li><strong>Outbreak Risk:</strong> assesses the overall outbreak risk combining the importation risk with the vaccination coverage of children</li>
+        <li><strong>Epidemiological Data:</strong>Surveillance data of the last 2 weeks</li>
     </ul>
+    <p><em>Gray areas indicate counties with no available data.</em></p>
 </div>
 
 <div id="main">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation"><button class="nav-link active" id="county_risk-tab" data-bs-toggle="tab" data-bs-target="#county_risk" type="button" role="tab">County Risk</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="imported-tab" data-bs-toggle="tab" data-bs-target="#imported" type="button" role="tab">Imported</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="local-tab" data-bs-toggle="tab" data-bs-target="#local" type="button" role="tab">Local</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="no_risk-tab" data-bs-toggle="tab" data-bs-target="#no_risk" type="button" role="tab">No Risk</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link active" id="log_importation_risk-tab" data-bs-toggle="tab" data-bs-target="#log_importation_risk" type="button" role="tab">Importation Risk</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="coverage-tab" data-bs-toggle="tab" data-bs-target="#coverage" type="button" role="tab">Recent Vaccination Coverage</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="percentile_mmr_risk-tab" data-bs-toggle="tab" data-bs-target="#percentile_mmr_risk" type="button" role="tab">Outbreak Risk</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="recent_data-tab" data-bs-toggle="tab" data-bs-target="#recent_data" type="button" role="tab">Epidemiological Data</button></li>
     </ul>
     <div class="tab-content" id="myTabContent">
         
-            <div class="tab-pane fade show active" id="county_risk" role="tabpanel">
-                <iframe src="maps/county_risk.html"></iframe>
+            <div class="tab-pane fade show active" id="log_importation_risk" role="tabpanel">
+                <iframe src="maps/log_importation_risk.html"></iframe>
             </div>
             
-            <div class="tab-pane fade " id="imported" role="tabpanel">
-                <iframe src="maps/imported.html"></iframe>
+            <div class="tab-pane fade " id="coverage" role="tabpanel">
+                <iframe src="maps/coverage.html"></iframe>
             </div>
             
-            <div class="tab-pane fade " id="local" role="tabpanel">
-                <iframe src="maps/local.html"></iframe>
+            <div class="tab-pane fade " id="percentile_mmr_risk" role="tabpanel">
+                <iframe src="maps/percentile_mmr_risk.html"></iframe>
             </div>
             
-            <div class="tab-pane fade " id="no_risk" role="tabpanel">
-                <iframe src="maps/no_risk.html"></iframe>
+            <div class="tab-pane fade " id="recent_data" role="tabpanel">
+                <iframe src="maps/recent_data.html"></iframe>
             </div>
             
     </div>
